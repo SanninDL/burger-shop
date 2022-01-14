@@ -54,7 +54,7 @@ function Shop() {
 	const [products, setProducts] = useState(null)
 	const [query, setQuery] = useState('')
 	const [currentPage, setCurrentPage] = useState(1)
-	const [totalPages, setTotalPages] = useState(8)
+	const [totalPages] = useState(8)
 	const searchRef = useRef('')
 	const defaultProduct = useRef(null)
 	const categories = [{ name: 'All' }, ...useGetApi('getCategories')]

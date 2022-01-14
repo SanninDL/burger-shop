@@ -10,7 +10,6 @@ export default function useGetApi(action) {
 				const response = await productApi[action]()
 				setResult(response)
 			} catch (e) {
-				console.log('co loi')
 				console.log('error ', e)
 			}
 		}
