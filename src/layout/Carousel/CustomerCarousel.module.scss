@@ -1,0 +1,114 @@
+@import '../../helper/variable.scss';
+
+.wrap {
+	background-color: #f7f2e2;
+}
+.star {
+	margin: 15px 0;
+}
+.itemWrap {
+	padding: 15px;
+}
+.item {
+	background-color: white;
+	border-radius: 8px;
+	padding: 40px;
+	display: block !important;
+}
+.control {
+	font-size: 20px;
+	color: white;
+	background-color: $primary-color;
+	width: 40px !important;
+	height: 40px !important;
+	z-index: 2;
+	&::before {
+		display: none;
+	}
+}
+.controlBtn {
+	background-color: black;
+	color: white;
+
+	border-radius: 50%;
+	text-align: center;
+	cursor: pointer;
+
+	i {
+		line-height: 40px;
+		font-size: 20px;
+	}
+	&:hover {
+		background-color: $primary-color;
+	}
+}
+.prev {
+	left: 0 !important;
+}
+.next {
+	right: 0 !important;
+}
+
+.desk {
+	flex: 0 0 50%;
+	padding: 40px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.text {
+	margin-bottom: 20px;
+	text-align: center;
+}
+.user {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.avatar {
+	width: 60px;
+	height: 60px;
+	margin-right: 10px;
+	// overflow: hidden;
+	position: relative;
+	img {
+		border-radius: 50%;
+		width: 100%;
+		height: 100%;
+	}
+	.quote {
+		width: 25px;
+		height: 25px;
+		border-radius: 50%;
+		font-size: 16px;
+		line-height: 25px;
+		background-color: $secondary-color;
+		color: white;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
+}
+.name {
+	display: flex;
+	flex-direction: column;
+	gap: 6px 0;
+	justify-content: center;
+	text-align: left;
+	h6 {
+		font-size: 16px;
+	}
+	p {
+		font-size: 14px;
+		line-height: 1;
+	}
+}
+.img {
+	flex: 0 0 50%;
+
+	padding: 0;
+	overflow: hidden;
+	img {
+		width: 100%;
+	}
+}

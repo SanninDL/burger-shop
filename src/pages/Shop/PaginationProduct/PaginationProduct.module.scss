@@ -1,0 +1,26 @@
+@import '../../../helper/variable.scss';
+
+.pages {
+	display: flex;
+	align-items: center;
+}
+.number,
+.prev,
+.next {
+	width: 45px;
+	height: 45px;
+	border-radius: 100rem;
+	text-align: center;
+	background-color: #f2f2f2;
+	color: $primary-color;
+	margin: 0 4px;
+
+	&:hover {
+		background-color: $primary-color;
+		color: white;
+	}
+}
+.number.current {
+	background-color: $primary-color;
+	color: white;
+}

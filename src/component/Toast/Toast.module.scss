@@ -1,0 +1,74 @@
+@import '../../helper/variable.scss';
+
+.wrap {
+	visibility: visible;
+	position: fixed;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 9999;
+	opacity: 1;
+	background-color: white;
+	box-shadow: 0px 15px 45px -9px rgba(0, 0, 0, 0.2);
+	font-size: 14px;
+	padding: 20px;
+	border-radius: 5px;
+	// max-width: 700px;
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+	align-items: center;
+	min-width: 300px;
+	// transition: all 0.3s linear;
+	// animation: fadeout 0.5 2.5s;
+}
+.icon {
+	color: $primary-color;
+	font-size: 22px;
+}
+.info {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	text-align: left;
+	flex: 1;
+	color: $heading;
+}
+.hide {
+	@extend .wrap;
+	opacity: 0;
+	visibility: hidden;
+}
+@-webkit-keyframes fadeout {
+	from {
+		bottom: 30px;
+		opacity: 1;
+	}
+	to {
+		bottom: 0;
+		opacity: 0;
+	}
+}
+
+@keyframes fadeout {
+	from {
+		bottom: 30px;
+		opacity: 1;
+	}
+	to {
+		bottom: 0;
+		opacity: 0;
+	}
+}
+.name {
+	font-weight: 700;
+}
+.viewCart {
+	color: $primary-color;
+	font-weight: 700;
+}
+.close {
+	// margin-left: 30px;
+	font-size: 20px;
+	color: $heading;
+}

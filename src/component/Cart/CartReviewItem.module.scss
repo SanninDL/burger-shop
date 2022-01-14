@@ -1,0 +1,40 @@
+@import '../../helper/variable';
+.wrap {
+	background-color: white;
+	padding: 16px;
+	border: 1px solid #d7c7b5;
+	box-shadow: $box-shadow;
+	border-radius: 10px;
+	margin-bottom: 20px;
+	color: black;
+}
+.info {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 8px;
+	padding: 12px 0;
+}
+.name {
+	font-size: 20px;
+	margin: 0;
+}
+.price {
+	margin-left: 20px;
+	font-size: 20px;
+}
+.control {
+	padding: 12px 0;
+	border-top: 1px solid $main-bg-color;
+	color: black;
+	display: flex;
+	justify-content: space-between;
+	button {
+		&:hover {
+			color: $primary-color;
+		}
+	}
+}
+.left {
+	display: flex;
+	gap: 0 16px;
+}

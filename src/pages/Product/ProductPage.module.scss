@@ -1,0 +1,173 @@
+@import '../../helper/variable.scss';
+
+.LoadingWrap {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 9;
+	background-color: rgba($color: $bg-item-color, $alpha: 0.5);
+}
+.productWrap {
+	padding: 60px 0;
+	min-height: 400px;
+}
+.heading {
+	gap: 30px 0;
+	margin-bottom: 50px;
+}
+.productImg {
+	height: 450px;
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: bottom;
+	}
+}
+.ProductContent {
+	padding-top: 60px;
+}
+.name {
+	color: $black-color;
+	font-size: 36px;
+	margin-bottom: 30px;
+}
+.info {
+	display: flex;
+	gap: 0 10px;
+	text-align: center;
+	align-items: center;
+}
+.deletePrice {
+	font-weight: 400;
+	margin-right: 10px;
+	color: #999;
+	text-decoration: line-through;
+}
+.price {
+	color: $black-color;
+	font-size: 24px;
+	line-height: calc(30 / 24);
+	color: $primary-color;
+}
+.rateWrap {
+	display: flex;
+	gap: 0 8px;
+}
+.rate {
+	font-weight: 500;
+	position: relative;
+	i {
+		margin: 0 2px;
+		color: #f7d01c;
+	}
+	span {
+		margin-left: 10px;
+	}
+}
+.overlayRate {
+	background: #fff;
+	height: 100%;
+	overflow: hidden;
+	mix-blend-mode: color;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.desc {
+	margin-top: 20px;
+	font-size: 16px;
+	line-height: calc(34 / 16);
+}
+.control {
+	margin-top: 16px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.socialWrap {
+	margin-top: 50px;
+	display: inline-flex;
+	align-items: center;
+}
+.shareBtn {
+	padding: 8px 16px;
+	background-color: #f2f2f2;
+	border-radius: 4px;
+	font-weight: 600;
+	position: relative;
+	overflow: hidden;
+	transform: translateZ(0);
+
+	i {
+		margin-right: 16px;
+	}
+	&::before {
+		content: '';
+		display: block;
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: 100%;
+		width: 0%;
+		z-index: 1;
+		background-color: #e5e5e5;
+		transition: all 0.3s ease-in-out;
+	}
+	i,
+	span {
+		position: relative;
+		z-index: 100;
+	}
+}
+.shareBtn:hover.shareBtn::before {
+	width: 110%;
+}
+.socialWrap:hover .social {
+	opacity: 1;
+	li {
+		margin-left: 0;
+	}
+}
+.social {
+	margin-left: 20px;
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	opacity: 0;
+	transition: $transition;
+	li {
+		font-size: 20px;
+		padding: 4px;
+		margin-left: -15px;
+		transition: all 0.5s ease-in-out;
+		cursor: pointer;
+		&:hover {
+			color: $primary-color;
+		}
+	}
+}
+.show {
+	display: flex;
+}
+.bottom {
+	margin-top: 40px;
+
+	// gap: 40px;
+}
+@include maxWidth(992px) {
+	.ProductContent {
+		padding-top: 0;
+	}
+	.productImg {
+		padding: 0 15px;
+	}
+}
+@include maxWidth(576px) {
+	.control {
+		flex-direction: column;
+		gap: 30px 0;
+	}
+}

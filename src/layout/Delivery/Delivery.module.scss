@@ -1,0 +1,85 @@
+@import '../../helper/variable.scss';
+
+.wrap {
+	background-image: url('../../assets/img/delivery_bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 70px 0;
+	position: relative;
+}
+.img {
+	position: absolute;
+	top: 38%;
+	left: 38%;
+	z-index: 1;
+}
+.label {
+	color: $primary-color;
+	text-transform: uppercase;
+	font-size: 24px;
+	font-family: $secondary-font;
+}
+.left {
+	text-align: left;
+	padding-right: 150px;
+	p {
+		padding-right: 120px;
+	}
+}
+.right {
+	text-align: right;
+	p {
+		padding-left: 120px;
+	}
+}
+.left,
+.right {
+	position: relative;
+	z-index: 2;
+	color: white;
+	h2,
+	p {
+		color: inherit;
+	}
+}
+.title {
+	font-size: 64px;
+	line-height: 1;
+	margin: 20px 0;
+}
+.btn {
+	margin-top: 30px;
+}
+@include maxWidth(1200px) {
+	.left,
+	.right {
+		width: 70%;
+	}
+	.left {
+		padding-right: 0;
+		p {
+			padding: 0;
+		}
+	}
+	.right {
+		margin-top: 40px;
+		text-align: left;
+		p {
+			padding: 0;
+		}
+	}
+	.img {
+		left: 60%;
+	}
+}
+@include maxWidth(992px) {
+	.title {
+		font-size: 35px;
+	}
+}
+@include maxWidth(768px) {
+	.left,
+	.right {
+		width: 100%;
+	}
+}

@@ -1,0 +1,91 @@
+@import '../../helper/variable.scss';
+
+.wrap {
+	padding: 40px 0;
+	display: flex;
+	// align-items: center;
+}
+.desk {
+	flex: 0 0 40%;
+	padding: 30px 0;
+	p {
+		padding: 20px 0;
+	}
+}
+.label {
+	color: $primary-color;
+	text-transform: uppercase;
+	font-weight: 700;
+	margin-bottom: 10px;
+	font-family: $secondary-font;
+}
+.title {
+	font-weight: 900;
+	font-size: 64px;
+	line-height: 1;
+}
+.btn {
+	margin-top: 20px;
+}
+.socialList {
+	margin-top: 30px;
+	display: flex;
+	gap: 16px;
+}
+.socialItem {
+	a {
+		display: block;
+	}
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	background-color: $secondary-color;
+	font-size: 20px;
+	line-height: 36px;
+	text-align: center;
+	color: white;
+	border: 2px solid $secondary-color;
+	&:hover {
+		background-color: transparent;
+		color: $secondary-color;
+	}
+}
+.image {
+	flex: 0 0 60%;
+	position: relative;
+	img {
+		object-fit: contain;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+}
+@include maxWidth(992px) {
+	.desk {
+		flex: 0 0 60%;
+	}
+	.title {
+		font-size: 45px;
+	}
+	.image {
+		flex: 0 0 40%;
+	}
+}
+@include maxWidth(768px) {
+	.wrap {
+		display: block;
+	}
+
+	.image {
+		height: 300px;
+	}
+}
+@include maxWidth(576px) {
+	.title {
+		font-size: 36px;
+	}
+}

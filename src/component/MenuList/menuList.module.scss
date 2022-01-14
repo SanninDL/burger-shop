@@ -1,0 +1,12 @@
+@import '../../helper/variable.scss';
+@import '../../helper/global.scss';
+
+.wrap {
+	padding-top: 60px;
+}
+.list {
+	align-items: stretch;
+	gap: 30px 0;
+	flex-wrap: nowrap !important;
+	overflow-x: auto;
+}

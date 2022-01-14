@@ -1,0 +1,20 @@
+@import '../../helper/variable.scss';
+.processBar {
+	margin: 50px 0;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	background-color: rgba($color: $primary-color, $alpha: 0.07);
+	border-radius: 100px;
+}
+.processItem {
+	line-height: calc(40 / 18);
+	font-weight: 700;
+	color: rgba($color: $primary-color, $alpha: 0.5);
+	border-radius: 100px;
+	text-align: center;
+}
+.processItemActive {
+	@extend .processItem;
+	color: white;
+	background-color: $primary-color;
+}

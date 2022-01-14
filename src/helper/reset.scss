@@ -1,0 +1,79 @@
+@import './variable.scss';
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+html {
+	font-family: 'Jost', sans-serif;
+	vertical-align: middle;
+}
+body {
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 1;
+	color: $gray-color;
+	vertical-align: middle;
+}
+#root {
+	overflow: hidden;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+	display: inline-block;
+}
+input {
+	background-color: transparent;
+	outline: none;
+	border: none;
+	color: inherit;
+	font-family: inherit;
+}
+textarea {
+	color: inherit;
+	font-size: inherit;
+	outline: none;
+	font-family: inherit;
+}
+button {
+	background-color: transparent;
+	outline: none;
+	border: none;
+	color: inherit;
+	font-weight: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	cursor: pointer;
+}
+select,
+option {
+	font-family: inherit;
+	color: inherit;
+}
+ul {
+	list-style: none;
+}
+img {
+	max-height: 100%;
+	max-width: 100%;
+	display: block;
+	object-fit: cover;
+	margin: 0 auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 700;
+	color: $heading;
+}

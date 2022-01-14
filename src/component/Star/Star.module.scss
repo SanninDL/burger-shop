@@ -1,0 +1,19 @@
+@import '../../helper/variable.scss';
+.rate {
+	position: relative;
+	display: inline-block;
+	i {
+		color: $yellow-color;
+		font-size: 18px;
+		line-height: calc(34 / 18);
+	}
+}
+.overlay {
+	background: white;
+	height: 100%;
+	overflow: hidden;
+	mix-blend-mode: color;
+	position: absolute;
+	top: 0;
+	right: 0;
+}

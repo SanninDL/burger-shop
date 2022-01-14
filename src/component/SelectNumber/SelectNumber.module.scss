@@ -1,0 +1,16 @@
+@import '../../helper/variable.scss';
+.count {
+	display: flex;
+	font-size: 24px;
+}
+.inputControl {
+	width: 50px;
+	text-align: center;
+	font-size: 20px;
+}
+.up,
+.down {
+	color: $primary-color;
+
+	// font-size: 20px;
+}

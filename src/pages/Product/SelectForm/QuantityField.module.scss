@@ -1,0 +1,20 @@
+@import '../../../helper/variable.scss';
+
+.formItem {
+	padding: 30px 0;
+	// border-top: 1px solid $disable-color;
+	border-bottom: 1px solid $disable-color;
+}
+.label {
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+.content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: $bg-item-color;
+	padding: 16px;
+	// width: 540px;
+	border-radius: 10px;
+}

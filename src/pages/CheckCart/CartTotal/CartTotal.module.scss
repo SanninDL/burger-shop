@@ -1,0 +1,37 @@
+@import '../../../helper/variable.scss';
+.wrap {
+	// width: 50%;
+	// margin-left: auto;
+	margin-top: 60px;
+	h5 {
+		color: $black-color;
+		font-size: 24px;
+		margin-bottom: 20px;
+	}
+}
+
+.tableTotal {
+	width: 100%;
+	background-color: $bg-gray-color;
+	margin-bottom: 20px;
+	th,
+	td {
+		padding: 18px;
+		border-width: 0;
+	}
+	th {
+		text-align: left;
+	}
+	td {
+		text-align: right;
+	}
+}
+.orderTotal {
+	th {
+		border-top: 1px solid #fff;
+	}
+	td {
+		border-top: 1px solid #fff;
+		font-weight: 700;
+	}
+}

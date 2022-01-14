@@ -1,0 +1,61 @@
+@import '../../helper/variable.scss';
+
+.wrap {
+	padding: 50px 0 70px;
+}
+.titlePage {
+	font-size: 36px;
+	font-weight: 600;
+	margin-bottom: 40px;
+}
+
+.rowHeading {
+	border-bottom: 1px solid #f1f1f1;
+	padding-bottom: 30px;
+}
+.inputControl {
+	padding: 30px 0;
+	border-bottom: 1px solid #f1f1f1;
+	position: relative;
+}
+.couponBox {
+	display: flex;
+	align-items: center;
+}
+.message {
+	color: $primary-color;
+	margin-top: 10px;
+}
+.couponInput {
+	padding: 15px;
+	border: 1px solid #e5e5e5;
+	border-radius: 8px;
+	width: 250px;
+	font-size: 20px;
+	font-weight: 700;
+	font-style: italic;
+	margin-right: 20px;
+}
+.couponSelected {
+	color: $primary-color;
+	margin-top: 15px;
+	i {
+		font-size: 20px;
+		margin-right: 8px;
+	}
+}
+@include maxWidth(768px) {
+	.couponBox {
+		display: flex;
+		flex-direction: column;
+		gap: 20px 0;
+	}
+	.couponInput {
+		width: 100%;
+	}
+	.buttonSubmit {
+		a {
+			display: block;
+		}
+	}
+}

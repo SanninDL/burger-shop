@@ -1,0 +1,129 @@
+@import './variable.scss';
+
+p {
+	font-size: 16px;
+	line-height: 1.8;
+	color: $body-text;
+}
+
+.section {
+	padding: 60px 0;
+	text-align: center;
+	.heading {
+		margin-bottom: 40px;
+		h2 {
+			font-size: 50px;
+			padding: 10px 0 20px;
+		}
+		h5 {
+			font-size: 24px;
+			padding: 10px 0;
+			color: $primary-color;
+			font-weight: 700;
+			font-family: 'Permanent Marker', cursive;
+		}
+	}
+}
+
+.colorPri {
+	color: $primary-color !important;
+}
+.buttonPri {
+	display: inline-flex;
+	white-space: nowrap;
+	gap: 0 8px;
+	align-items: center;
+	justify-content: center;
+	text-transform: uppercase;
+	padding: 16px 36px;
+	font-size: 15px;
+	line-height: 1;
+	color: white;
+	background-color: $primary-color;
+	font-weight: 700;
+	border-radius: 36px;
+	text-align: center;
+	transition: $transition;
+	cursor: pointer;
+	&:hover {
+		background-color: $primary-hover;
+		color: $heading;
+	}
+	@include maxWidth(576px) {
+		width: 100%;
+	}
+}
+.buttonIcon {
+	@extend .buttonPri;
+	position: relative;
+
+	.text {
+		font-weight: 500;
+	}
+	.icon {
+		opacity: 0;
+		position: absolute;
+		top: 50%;
+		left: auto;
+		right: 5px;
+		transform: translateY(-50%) rotate(45deg);
+		transition: all 0.25s linear;
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+		border-radius: 50%;
+		background-color: $heading;
+	}
+	&:hover {
+		padding-right: 60px;
+	}
+	&:hover .icon {
+		// display: block;
+		opacity: 1;
+		color: white;
+	}
+}
+
+.buttonPriSmall {
+	@extend .buttonPri;
+	padding: 10px 16px;
+	font-weight: 400;
+}
+
+.buttonSquare {
+	// @extend .button;
+	display: inline-flex;
+	gap: 0 6px;
+	border-radius: 4px;
+	padding: 4px 10px;
+	border: none;
+	color: #333;
+	color: $heading;
+	background-color: $primary-color;
+	&:hover {
+		color: white;
+		background-color: $primary-hover;
+	}
+}
+
+.buttonSquarePri {
+	@extend .buttonPri;
+	@include maxWidth(576px) {
+		// display: block;
+		width: 100%;
+	}
+}
+.text-center {
+	text-align: center !important;
+}
+.hideOnSmallPC {
+	@include maxWidth(992px) {
+		display: none !important;
+	}
+}
+.hideOnTablet {
+	@include maxWidth(768px) {
+		display: none !important;
+	}
+}

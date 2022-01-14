@@ -1,0 +1,13 @@
+@import '../../../helper/variable.scss';
+
+.formWrap {
+	margin-top: 50px;
+}
+.selectWrap {
+	min-height: 340px;
+	border-bottom: 1px solid $disable-color;
+}
+.bottom {
+	max-width: 540px;
+	margin: auto;
+}

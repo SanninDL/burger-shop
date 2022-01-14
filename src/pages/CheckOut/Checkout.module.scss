@@ -1,0 +1,46 @@
+@import '../../helper/variable.scss';
+
+.content {
+	margin: 40px 0;
+	h3 {
+		margin-bottom: 40px;
+	}
+	padding: 0 15px;
+}
+
+.formGroup {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	margin-bottom: 20px;
+	label {
+		font-weight: 700;
+	}
+	input {
+		height: 50px;
+		border: 1px solid $gray-color;
+		border-radius: 5px;
+		padding: 0 20px;
+		font-weight: 700;
+		font-size: 18px;
+	}
+	textarea {
+		padding: 15px;
+		font-weight: 700;
+		resize: none;
+		border: 1px solid $gray-color;
+		border-radius: 5px;
+	}
+}
+.errorMessage {
+	color: $primary-color;
+}
+.LoadingWrap {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 9999;
+	background-color: rgba($color: $bg-item-color, $alpha: 0.5);
+}
