@@ -21,7 +21,7 @@
 	background-color: black;
 	color: white;
 	box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
-	padding: 0px;
+	padding: 0;
 }
 .header {
 	display: flex;
@@ -43,6 +43,7 @@
 }
 .link {
 	display: flex;
+	padding: 6px 0;
 }
 
 .navWrap {
