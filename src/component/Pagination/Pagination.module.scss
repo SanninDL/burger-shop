@@ -56,3 +56,8 @@
 		font-size: 20px;
 	}
 }
+@include maxWidth(576px) {
+	.pageLevel {
+		display: none;
+	}
+}

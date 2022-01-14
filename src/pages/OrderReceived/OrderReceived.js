@@ -23,7 +23,7 @@ export default function OrderReceived() {
 		subTotal,
 	} = bill
 	useEffect(() => {
-		document.title = 'Checkout - Gloyera'
+		document.title = 'Checkout - Gloreya'
 	}, [])
 	useEffect(() => {
 		if (!products) {

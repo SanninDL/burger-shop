@@ -20,7 +20,7 @@ function CheckCart() {
 	const inputRef = useRef(null)
 
 	useEffect(() => {
-		document.title = 'Cart - Gloyera'
+		document.title = 'Cart - Gloreya'
 	}, [])
 
 	useEffect(() => {

@@ -9,7 +9,7 @@ import PopularList from '../../layout/PopularList/PopularList'
 import Welcome from '../../layout/Welcome/Welcome'
 
 function Home() {
-	document.title = 'Gloyera'
+	document.title = 'Gloreya'
 	return (
 		<>
 			<ScrollToTop />

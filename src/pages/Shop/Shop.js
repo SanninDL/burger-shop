@@ -60,7 +60,7 @@ function Shop() {
 	const categories = [{ name: 'All' }, ...useGetApi('getCategories')]
 	const [loading, setLoading] = useState(true)
 
-	document.title = 'Menu - Gloyera'
+	document.title = 'Menu - Gloreya'
 
 	// get product list
 	useEffect(() => {

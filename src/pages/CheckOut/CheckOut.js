@@ -25,7 +25,7 @@ function CheckOut() {
 	const navigate = useNavigate()
 
 	useEffect(() => {
-		document.title = 'Checkout - Gloyera'
+		document.title = 'Checkout - Gloreya'
 	}, [])
 
 	// submit check out

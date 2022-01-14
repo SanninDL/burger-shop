@@ -30,7 +30,7 @@ function ProductPage() {
 					}
 					const response = await productApi.getOne(params)
 					setProduct(response[0])
-					document.title = `${response[0].name} - Gloyera`
+					document.title = `${response[0].name} - Gloreya`
 				} catch (e) {
 					console.log('error ', e)
 				}
