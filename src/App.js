@@ -11,6 +11,7 @@ import OrderReceived from './pages/OrderReceived/OrderReceived'
 import ProductPage from './pages/Product/ProductPage'
 import reducer, { initialState } from './store/reducer'
 import Shop from './pages/Shop/Shop'
+import NotFound from './pages/NotFound/NotFound'
 
 //
 
@@ -38,19 +39,14 @@ function App() {
 						<Header />
 
 						<Routes>
+							<Route path='*' element={<NotFound />} />
 							<Route path='/' element={<Home />} />
 							<Route path='/check-cart' element={<CheckCart />} />
 							<Route path='/checkout' element={<CheckOut />} />
 							<Route path='/Menu' element={<Shop />} />
 
-							<Route
-								path='/order-received'
-								element={<OrderReceived />}
-							/>
-							<Route
-								path='/Menu/:productId'
-								element={<ProductPage />}
-							/>
+							<Route path='/order-received' element={<OrderReceived />} />
+							<Route path='/Menu/:productId' element={<ProductPage />} />
 						</Routes>
 
 						<Footer />

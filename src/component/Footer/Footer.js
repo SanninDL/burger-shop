@@ -16,24 +16,36 @@ function Footer() {
 							</div>
 							<ul className={styles.socialList}>
 								<li className={styles.socialItem}>
-									<Link to='facebook.com'>
+									<a
+										href={'http://facebook.com'}
+										rel='noreferrer'
+										target='_blank'>
 										<i className='fab fa-facebook-f'></i>
-									</Link>
+									</a>
 								</li>
 								<li className={styles.socialItem}>
-									<Link to='google.com'>
+									<a
+										href={'https://instagram.com'}
+										rel='noreferrer'
+										target='_blank'>
 										<i className='fab fa-instagram'></i>
-									</Link>
+									</a>
 								</li>
 								<li className={styles.socialItem}>
-									<Link to='google.com'>
+									<a
+										href={'https://twitter.com'}
+										rel='noreferrer'
+										target='_blank'>
 										<i className='fab fa-twitter'></i>
-									</Link>
+									</a>
 								</li>
 								<li className={styles.socialItem}>
-									<Link to='google.com'>
+									<a
+										href={'https://www.linkedin.com/'}
+										rel='noreferrer'
+										target='_blank'>
 										<i className='fab fa-linkedin-in'></i>
-									</Link>
+									</a>
 								</li>
 							</ul>
 						</div>

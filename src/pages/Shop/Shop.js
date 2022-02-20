@@ -54,7 +54,7 @@ function Shop() {
 	const [products, setProducts] = useState(null)
 	const [query, setQuery] = useState('')
 	const [currentPage, setCurrentPage] = useState(1)
-	const [totalPages] = useState(8)
+	const [totalPages, setTotalPages] = useState(1)
 	const searchRef = useRef('')
 	const defaultProduct = useRef(null)
 	const categories = [{ name: 'All' }, ...useGetApi('getCategories')]
@@ -73,9 +73,10 @@ function Shop() {
 						_page: currentPage,
 					}
 					const response = await productApi.getAll(params)
-					setProducts(response)
+					setProducts(response.data)
+					setTotalPages(Math.ceil(response.pagination._totalRows / 9))
 
-					defaultProduct.current = response
+					defaultProduct.current = response.data
 					setLoading(false)
 				} else {
 					const params = {
@@ -85,9 +86,10 @@ function Shop() {
 						_page: currentPage,
 					}
 					const response = await productApi.getAll(params)
-					setProducts(response)
-					defaultProduct.current = response
+					setProducts(response.data)
+					defaultProduct.current = response.data
 					setLoading(false)
+					setTotalPages(Math.ceil(response.pagination._totalRows / 9))
 				}
 			} catch (e) {
 				console.log('error ', e)
@@ -100,6 +102,7 @@ function Shop() {
 		setLoading(true)
 		setCategoryActive(category)
 		setQuery('')
+		setCurrentPage(1)
 	}
 
 	const onChangeSort = (option) => {
@@ -168,26 +171,18 @@ function Shop() {
 					<div className='row'>
 						<div className={`col-12 col-lg-3 ${styles.left}`}>
 							<div className={styles.categoriesWrap}>
-								<h5 className={styles.title}>
-									Product categories
-								</h5>
+								<h5 className={styles.title}>Product categories</h5>
 								<ul className={styles.list}>
 									{categories.map((category, index) => (
 										<li
 											key={index}
-											onClick={() =>
-												onSetCategory(category)
-											}
+											onClick={() => onSetCategory(category)}
 											className={
-												category.name ===
-												categoryActive.name
+												category.name === categoryActive.name
 													? `${styles.active}  ${styles.item}`
 													: styles.item
 											}>
-											<div
-												className={styles.categoryName}>
-												{category.name}
-											</div>
+											<div className={styles.categoryName}>{category.name}</div>
 										</li>
 									))}
 								</ul>
@@ -206,9 +201,7 @@ function Shop() {
 												onFocus={handleSearchFocus}
 											/>
 										</div>
-										<div
-											className={styles.searchBtn}
-											onClick={handleSearch}>
+										<div className={styles.searchBtn} onClick={handleSearch}>
 											<i className='fas fa-search'></i>
 										</div>
 									</div>
@@ -223,21 +216,14 @@ function Shop() {
 								</div>
 								<div className={styles.productsListWrap}>
 									{query !== '' && (
-										<span className={styles.result}>
-											Results for "{query}"
-										</span>
+										<span className={styles.result}>Results for "{query}"</span>
 									)}
 									{!loading ? (
-										<div
-											className={`row ${styles.productsList}`}>
+										<div className={`row ${styles.productsList}`}>
 											{products.length > 0 ? (
 												products.map((product) => (
-													<div
-														className='col-6 col-md-4 '
-														key={product.id}>
-														<MenuItem
-															item={product}
-														/>
+													<div className='col-6 col-md-4 ' key={product.id}>
+														<MenuItem item={product} />
 													</div>
 												))
 											) : (
@@ -262,7 +248,7 @@ function Shop() {
 									<PaginationProduct
 										totalCount={totalPages}
 										currentPage={currentPage}
-										pageSize={4}
+										pageSize={6}
 										handleChangPage={handleChangPage}
 									/>
 								</div>

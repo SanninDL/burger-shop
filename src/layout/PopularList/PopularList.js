@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import PopularItem from './PopularItem'
 
 export default function PopularList() {
-	const [list, setList] = useState([])
+	const [list, setList] = useState(null)
 
 	useEffect(() => {
 		const getApi = async () => {
@@ -16,8 +16,9 @@ export default function PopularList() {
 					_page: 1,
 				}
 				const respone = await productApi.getAll(params)
+				console.log(respone.data)
 
-				setList(respone)
+				setList(respone.data)
 			} catch (e) {
 				console.log('error ', e)
 			}
@@ -33,13 +34,12 @@ export default function PopularList() {
 					<h2>Most popular dishes</h2>
 				</div>
 				<div className={`row ${styles.list}`}>
-					{list.map((product) => (
-						<div
-							className='col-12 col-md-6 col-xl-3 '
-							key={product.id}>
-							<PopularItem product={product} />
-						</div>
-					))}
+					{list &&
+						list.map((product) => (
+							<div className='col-12 col-md-6 col-xl-3 ' key={product.id}>
+								<PopularItem product={product} />
+							</div>
+						))}
 				</div>
 				<div className={styles.button}>
 					<Link to='/Menu'>

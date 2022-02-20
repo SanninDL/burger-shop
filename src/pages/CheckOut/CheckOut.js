@@ -101,27 +101,18 @@ function CheckOut() {
 										<h3>Billing details</h3>
 
 										{CheckOutFields.map((field, index) => (
-											<div
-												key={index}
-												className={styles.formGroup}>
+											<div key={index} className={styles.formGroup}>
 												<Field
 													type={field.type}
 													name={field.name}
 													label={field.label}
-													placeholder={
-														field.placeholder
-													}
+													placeholder={field.placeholder}
 													component={inputField}
 												/>
 												<ErrorMessage
 													name={field.name}
 													render={(e) => (
-														<div
-															className={
-																styles.errorMessage
-															}>
-															{e}
-														</div>
+														<div className={styles.errorMessage}>{e}</div>
 													)}
 												/>
 											</div>

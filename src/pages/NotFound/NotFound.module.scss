@@ -1,0 +1,43 @@
+@import '../../helper/variable.scss';
+.top {
+	padding: 160px 0 100px;
+	// background: $bg-gray-color;
+	background-image: url(../../assets/img/banner.png);
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-size: cover;
+}
+.pageTitle {
+	color: $primary-color;
+	font-size: 60px;
+	margin: 0;
+	text-align: center;
+}
+.img {
+	margin: 20px 0;
+	img {
+		margin: auto;
+		width: 150px;
+		object-fit: cover;
+	}
+}
+.text {
+	text-align: center;
+	color: black;
+	strong {
+		font-size: 24px;
+	}
+	p {
+		color: black;
+	}
+}
+.btn {
+	margin: 20px 0;
+	display: flex;
+	justify-content: center;
+}
+@include maxWidth(768px) {
+	.pageTitle {
+		font-size: 40px;
+	}
+}
