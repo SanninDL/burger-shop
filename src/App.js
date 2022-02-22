@@ -21,6 +21,7 @@ export const SetBill = createContext()
 function App() {
 	const [state, dispatch] = useReducer(reducer, initialState)
 	const [bill, setBill] = useState({})
+
 	useEffect(() => {
 		const saveState = {
 			...state,
